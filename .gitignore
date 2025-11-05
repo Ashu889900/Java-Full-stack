@@ -1,0 +1,12 @@
+# .gitignore (at D:\Spring-Projects\.gitignore)
+# Java
+*.class
+*.jar
+/build/
+/out/
+/target/
+
+# IDEs
+/.idea/
+/*.iml
+.vscode/
