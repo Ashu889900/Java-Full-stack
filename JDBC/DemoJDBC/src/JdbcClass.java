@@ -12,13 +12,18 @@ public class JdbcClass {
          *  PROCESS RESULT
          *  CLOSE CONNECTION
          */
+
+         int sid = 5;
+         String sname = "Robert";
+         int marks = 78;
+
          String url = "jdbc:postgresql://localhost:5432/postgres";
          String uname = "postgres";
          String password = "0000";
 //         String sql = "select * from student;";
-//         String sql = "Insert into student values(5, 'Robert', 78);";
+         String sql = "Insert into student values("+ sid +", '"+ sname +"', "+ marks +");";
 //         String sql = "Update student set sname = 'pera pera' where sid = 5;";
-         String sql = "delete from student where sid = 5;";
+//         String sql = "delete from student where sid = 5;";
 
          try {
              Class.forName("org.postgresql.Driver");
