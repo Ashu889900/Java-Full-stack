@@ -15,7 +15,10 @@ public class JdbcClass {
          String url = "jdbc:postgresql://localhost:5432/postgres";
          String uname = "postgres";
          String password = "0000";
-         String sql = "select * from student;";
+//         String sql = "select * from student;";
+//         String sql = "Insert into student values(5, 'Robert', 78);";
+//         String sql = "Update student set sname = 'pera pera' where sid = 5;";
+         String sql = "delete from student where sid = 5;";
 
          try {
              Class.forName("org.postgresql.Driver");
@@ -25,16 +28,19 @@ public class JdbcClass {
          try {
              Connection con = DriverManager.getConnection(url, uname, password);
              Statement st = con.createStatement();
-             ResultSet rs = st.executeQuery(sql);
+//             ResultSet rs = st.executeQuery(sql);
 //             rs.next();
 //             System.out.println(rs.getString("sname"));
-             while(rs.next()) {
-                 System.out.print(rs.getInt("sid") + " - ");
-                 System.out.print(rs.getString("sname") + " - ");
-                 System.out.println(rs.getInt("marks"));
-             }
+//             while(rs.next()) {
+//                 System.out.print(rs.getInt("sid") + " - ");
+//                 System.out.print(rs.getString("sname") + " - ");
+//                 System.out.println(rs.getInt("marks"));
+//             }
 
-             rs.close();
+             boolean status =  st.execute(sql);
+             System.out.println(status);
+
+//             rs.close();
              st.close();
              con.close();
              System.out.println("Connection closed");

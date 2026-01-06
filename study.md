@@ -14,4 +14,6 @@ In JDK 25 now we can now skip writing public static void in main funtion
 
         we can now directly use main() or void main() it implicitly calls those identifiers ;
 
-##
+in execute satement of jdbc the execute funtion returns boolean value :
+        if the opertaion is not resultset ex : [ update, insert or Delete ] , then it will return false 
+        it will return only true when result is resultSet ex for : Select 
