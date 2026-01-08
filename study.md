@@ -4,7 +4,7 @@ optional class does not replace stream api methods it specially for expected out
 
 the things we add in pom file gets reflected in effective pom file, the maven uses effective pom to refelct the changes in our project
 
-jdbc life cycle consist of : - import packages - Load drivers - Establish connection - Create statement - Execute statement - Execute Process - Close resources
+jdbc life cycle consist of : - import packages - Load drivers - Establish connection - Create statement - Execute statement - Execute Process - Close resources.
 
 when trying to print result statement in jdbc we need to move the pointer of column to fist column using object.next() otherwis it will result in error.
 
