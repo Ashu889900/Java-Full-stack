@@ -13,9 +13,9 @@ public class Main {
     public static void main(String[] args) {
 
         Student s1 = new Student();
-        s1.setsName("Neo");
-        s1.setRollNo(22);
-        s1.setsAge(19);
+//        s1.setsName("Neo");
+//        s1.setRollNo(22);
+//        s1.setsAge(19);
 
 //        Student s2 = null;
 
@@ -26,11 +26,13 @@ public class Main {
 
         Session session = sf.openSession();
 
+        s1 = session.get(Student.class, 22);
 
 //        s2 = session.get(Student.class,22);
         Transaction transaction = session.beginTransaction();
 
-        session.merge(s1);
+        session.remove(s1);
+//        session.merge(s1);
 //        session.persist(s1);
         transaction.commit();
 
@@ -40,5 +42,4 @@ public class Main {
         System.out.println(s1);
 
     }
-
 }
