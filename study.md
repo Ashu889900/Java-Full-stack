@@ -8,6 +8,7 @@ jdbc life cycle consist of : - import packages - Load drivers - Establish connec
 
 when trying to print result statement in jdbc we need to move the pointer of column to fist column using object.next() otherwis it will result in error.
 
+
 ## things i noticed
 
 In JDK 25 now we can now skip writing public static void in main funtion
@@ -17,3 +18,5 @@ In JDK 25 now we can now skip writing public static void in main funtion
 In execute satement of jdbc the execute funtion returns boolean value :
         if the opertaion is not resultset ex : [ update, insert or Delete ] , then it will return false 
         it will return only true when result is resultSet ex for : Select 
+
+In hibernate when creating a OneToMany and ManyToOne it crates three table. To stop crating the third table which consist of composit key we need to to use mappedBy funtion Ex : OneToMany(mappedBy = "ReferenceName")
